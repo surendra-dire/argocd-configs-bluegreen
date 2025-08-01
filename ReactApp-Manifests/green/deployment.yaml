@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: react-app
-        image: surendradev101/react-app:13a42e11037ccffc9666283e85d92178982b1138                                # update tag via CI
+        image: surendradev101/react-app:c23ae291ff9f68224f8464d981df90e42e1d9a9e
         ports:
         - containerPort: 80
         resources:
