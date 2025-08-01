@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-app
+  namespace: blue
+  labels:
+    app: react-app
+    env: blue
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: react-app
+      env: blue
+  template:
+    metadata:
+      labels:
+        app: react-app
+        env: blue
+    spec:
+      containers:
+      - name: react-app
+        image: surendradev101/react-app:13a42e11037ccffc9666283e85d92178982b1138              # update tag via CI
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: "500m"
+            memory: "256Mi"
+          requests:
+            cpu: "250m"
+            memory: "128Mi"
