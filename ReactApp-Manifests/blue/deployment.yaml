@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: react-app
-        image: surendradev101/react-app:bf01fa45f1f665293830bc9ac42a06bcb825a3dc
+        image: surendradev101/react-app:53af4693ba16ec8da7ada1f3f5ea342b0c75b0c9
         ports:
         - containerPort: 80
         resources:
